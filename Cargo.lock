@@ -5036,6 +5036,7 @@ dependencies = [
 name = "nockchain"
 version = "0.1.0"
 dependencies = [
+ "anyhow",
  "bs58",
  "clap",
  "equix",
@@ -5059,6 +5060,7 @@ dependencies = [
  "tokio",
  "tracing",
  "tracy-client",
+ "vergen",
  "zkvm-jetpack",
 ]
 
@@ -5198,6 +5200,7 @@ dependencies = [
 name = "nockchain-wallet"
 version = "0.1.0"
 dependencies = [
+ "anyhow",
  "bs58",
  "clap",
  "crossterm 0.29.0",
@@ -5222,6 +5225,7 @@ dependencies = [
  "tonic 0.14.2",
  "tracing",
  "tracing-subscriber",
+ "vergen",
  "zkvm-jetpack",
 ]
 
@@ -5481,6 +5485,15 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn 2.0.111",
+]
+
+[[package]]
+name = "num_threads"
+version = "0.1.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5c7398b9c8b70908f6371f47ed36737907c87c52af34c268fed0bf0ceb92ead9"
+dependencies = [
+ "libc",
 ]
 
 [[package]]
@@ -7826,7 +7839,9 @@ checksum = "91e7d9e3bb61134e77bde20dd4825b97c010155709965fedf0f49bb138e52a9d"
 dependencies = [
  "deranged",
  "itoa",
+ "libc",
  "num-conv",
+ "num_threads",
  "powerfmt",
  "serde",
  "time-core",
@@ -8483,6 +8498,18 @@ name = "vcpkg"
 version = "0.2.15"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "accd4ea62f7bb7a82fe23066fb0957d48ef677f6eeb8215f372f52e48bb32426"
+
+[[package]]
+name = "vergen"
+version = "8.3.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2990d9ea5967266ea0ccf413a4aa5c42a93dbcfda9cb49a97de6931726b12566"
+dependencies = [
+ "anyhow",
+ "cfg-if",
+ "rustversion",
+ "time",
+]
 
 [[package]]
 name = "version_check"

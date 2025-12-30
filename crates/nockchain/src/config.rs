@@ -39,7 +39,7 @@ pub const GENESIS_HEIGHT: u64 = 897767;
 #[derive(Parser, Debug, Clone)]
 #[command(
     name = "nockchain",
-    version = concat!(env!("CARGO_PKG_VERSION"), " (", env!("VERGEN_GIT_SHA"), ")")
+    version = concat!(env!("CARGO_PKG_VERSION"), " (", env!("VERGEN_GIT_SHA"), ")") 
 )]
 pub struct NockchainCli {
     #[command(flatten)]

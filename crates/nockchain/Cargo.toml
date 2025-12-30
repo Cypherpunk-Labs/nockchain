@@ -52,3 +52,4 @@ tracing.workspace = true
 tracy-client = { workspace = true, optional = true }
 
 zkvm-jetpack.workspace = true
+
